@@ -7,7 +7,7 @@ public:
         int j = n - 1;
         int x = n - 1;
 
-        vector<int> ans(n);
+        vector<int> ans(n,0);
 
         while (i <= j) {
             if (abs(nums[i]) > abs(nums[j])) {
