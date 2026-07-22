@@ -4,7 +4,7 @@ public:
         int n = nums.size();
         long long sum = 0;
         long long ans = 0;
-        unordered_map<long long, long long> mp;
+        unordered_map<int, int> mp;
         int i = 0, j = 0;
         for(int j = 0; j < k; j++){
             sum+=nums[j];
@@ -16,7 +16,6 @@ public:
         for(int j = k; j < n; j++){
             sum+=nums[j];
             sum-=nums[i];
-          
             if(mp[nums[i]] > 1){
                 mp[nums[i]]--;
             }
