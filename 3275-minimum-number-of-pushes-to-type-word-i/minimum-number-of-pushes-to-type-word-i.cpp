@@ -4,7 +4,10 @@ public:
         int n = word.size();
         int ans = 0;
         for(int i = 0; i < n; i++){
-            ans += i/8+1;        
+            if(i < 8) ans += 1;
+            else if(i < 16) ans +=2;
+            else if(i < 24) ans +=3;
+            else ans += 4;
         }
         return ans;
     }
